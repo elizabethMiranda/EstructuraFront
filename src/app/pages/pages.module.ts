@@ -12,7 +12,6 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
@@ -21,8 +20,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     DashboardComponent,
     ProgressComponent,
     Grafica1Component,
-    PagesComponent,
-    AccountSettingsComponent],
+    PagesComponent,],
   imports: [
     FormsModule,
     CommonModule,
