@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-pages',
@@ -6,18 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent implements OnInit {
-  public linkTheme = document.querySelector('#theme');
+  constructor(
+    private settingsService: SettingsService
+  ) { 
 
- //public dataTheme = localStorage.getItem('theme');
- ngOnInit(){
-  const url = localStorage.getItem('theme') || 'assets/css/colors/default.css';
-  //const url = `assets/css/colors/${theme}.css`;
-  if (this.linkTheme) {
-    this.linkTheme.setAttribute('href', url);
   }
-  //se guarda en el local storage
-  //localStorage.setItem('theme', url);
-  //Cuando la aplicacion se carga debemos leer el url que tenemos en el localstorage y aplicar el tema
-    //console.log(url);
+ ngOnInit(){
+  
  }
 }
